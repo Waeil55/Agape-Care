@@ -269,12 +269,10 @@
 
             const formData = new FormData(form);
 
-            /* * IMPORTANT: Replace YOUR_EMAIL@DOMAIN.COM below with your actual email address.
-             * IF YOU DO NOT RECEIVE THE EMAIL: 
-             * 1. You MUST check your inbox/spam folder for an activation email from FormSubmit after your FIRST test.
-             * 2. You must click "Activate Form" in that email before subsequent messages will come through.
+            /* * IMPORTANT: You must check your inbox/spam folder for an activation email from FormSubmit 
+             * after your FIRST test submission and click "Activate Form".
              */
-            const formSubmitUrl = 'https://formsubmit.co/ajax/YOUR_EMAIL@DOMAIN.COM'; 
+            const formSubmitUrl = 'https://formsubmit.co/ajax/agape.wael@gmail.com'; 
 
             fetch(formSubmitUrl, {
                 method: 'POST',
@@ -290,7 +288,6 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                // Display success message anyway for UX if fetch is blocked by browser extensions
                 formContainer.style.display = 'none';
                 thankYouMessage.style.display = 'block';
             });
